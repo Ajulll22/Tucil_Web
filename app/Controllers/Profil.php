@@ -4,7 +4,10 @@ class Profil extends BaseController
 {
 	public function index()
 	{
-		return view('profil');
+		$data['title'] = "Halaman Registrasi";
+
+		echo view('profil/p_header', $data);
+		echo view('profil/p_content', $data);
 	}
 
 	//--------------------------------------------------------------------

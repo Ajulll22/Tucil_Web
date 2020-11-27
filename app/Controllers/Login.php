@@ -18,6 +18,9 @@ class Login extends BaseController
     return redirect()->back()->withInput()->with('validation', $this->validator);
    }
   }
-  return view('login');
+  $data['title'] = "Halaman Depan";
+
+  echo view('login/l_header', $data);
+  echo view('login/l_content', $data);
  }
 }
